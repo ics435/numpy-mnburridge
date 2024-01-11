@@ -47,3 +47,17 @@ def test_covariance():
     C = submission.covariance(example_data)
     C_np = np.cov(example_data.T) # Numpy function expects data in DxN orientation.
     assert np.all(np.isclose(C, C_np))
+
+
+def test_nearest_neighbor_predict():
+    # Generate some example data.
+    X = np.array([[0,1.5], [1.5,0], [1,1]])
+    y = np.array([0, 0, 1]) 
+    X_test = np.array([[0,0], [0.1, 0.1], [0,1], [1, 0], [1,1], [4,-2], [4,2]])
+
+    # Test with euclid metric.
+    y_pred = nearest_neighbor_predict(X, y, X_test, metric='euclidean')
+    assert np.all(y_pred == np.array([1, 1, 0, 0, 1, 0, 1,]))
+    # Test with taxicab metric.
+    y_pred = nearest_neighbor_predict(X, y, X_test, metric='taxicab')
+    assert np.all(y_pred == np.array([0, 0, 0, 0, 1, 0, 1,]))
