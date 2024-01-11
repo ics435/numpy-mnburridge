@@ -87,7 +87,7 @@ def covariance(X):
     pass # IMPLEMENT ME
 
 
-def nearest_neighbor_predict(X, y, X_test):
+def nearest_neighbor_predict(X, y, X_test, metric):
   '''
   Classify the examples in X_test using the nearest neighbor algorithm. 
   Args:
@@ -96,6 +96,7 @@ def nearest_neighbor_predict(X, y, X_test):
     y: 1D numpy array containing the N labels. 
     X_test: 2D numpy array containing the feature matrix of the test data. 
             Shape is MxD, where M is the number of test points.
+    metric: "euclidean" or "taxicab"
   Returns: 
     y_test: 1D numpy array containing the M labels of the test data.
   '''
@@ -107,7 +108,5 @@ def nearest_neighbor_predict(X, y, X_test):
   assert X_test.ndim == 2
   assert X.shape[0] == y.shape[0]
   N, D = X.shape
-    
-  # IMPLEMENT ME
-  pass
-
+  M = X_test.shape[0]
+  pass # IMPLEMENT ME
