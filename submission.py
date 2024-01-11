@@ -87,3 +87,27 @@ def covariance(X):
     pass # IMPLEMENT ME
 
 
+def nearest_neighbor_predict(X, y, X_test):
+  '''
+  Classify the examples in X_test using the nearest neighbor algorithm. 
+  Args:
+    X: 2D numpy array containing the feature matrix with N rows and D columns, 
+       where N is number of examples and D is the number of features.
+    y: 1D numpy array containing the N labels. 
+    X_test: 2D numpy array containing the feature matrix of the test data. 
+            Shape is MxD, where M is the number of test points.
+  Returns: 
+    y_test: 1D numpy array containing the M labels of the test data.
+  '''
+  assert isinstance(X, np.ndarray)
+  assert isinstance(y, np.ndarray)
+  assert isinstance(X_test, np.ndarray)
+  assert X.ndim == 2
+  assert y.ndim == 1
+  assert X_test.ndim == 2
+  assert X.shape[0] == y.shape[0]
+  N, D = X.shape
+    
+  # IMPLEMENT ME
+  pass
+
