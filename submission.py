@@ -88,7 +88,7 @@ def covariance(X):
 
 
 def nearest_neighbor_predict(X, y, X_test, metric):
-  '''
+  """
   Classify the examples in X_test using the nearest neighbor algorithm. 
   Args:
     X: 2D numpy array containing the feature matrix with N rows and D columns, 
@@ -96,10 +96,10 @@ def nearest_neighbor_predict(X, y, X_test, metric):
     y: 1D numpy array containing the N labels. 
     X_test: 2D numpy array containing the feature matrix of the test data. 
             Shape is MxD, where M is the number of test points.
-    metric: "euclidean" or "taxicab"
+    metric: "euclidean" or "taxicab", string indicating distance metric to use.
   Returns: 
     y_test: 1D numpy array containing the M labels of the test data.
-  '''
+  """
   assert isinstance(X, np.ndarray)
   assert isinstance(y, np.ndarray)
   assert isinstance(X_test, np.ndarray)
