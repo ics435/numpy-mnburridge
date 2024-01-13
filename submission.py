@@ -3,7 +3,7 @@ from typing import List
 
 
 def bibonacci(n: int) -> List[int]:
-    """Write a function that computes the first n elements of the Bibonacci Sequence.
+    """Write a function that computes the first n+1 elements of the Bibonacci Sequence.
     This sequence is defined as: 
     B[0] = B[1] = B[2] = 1
     B[k] = B[k-1] + B[k-2] + B[k-3] for k>2.
