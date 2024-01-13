@@ -56,8 +56,8 @@ def test_nearest_neighbor_predict():
     X_test = np.array([[0,0], [0.1, 0.1], [0,1], [1, 0], [1,1], [4,-2], [4,2]])
 
     # Test with euclid metric.
-    y_pred = nearest_neighbor_predict(X, y, X_test, metric='euclidean')
+    y_pred = submission.nearest_neighbor_predict(X, y, X_test, metric='euclidean')
     assert np.all(y_pred == np.array([1, 1, 0, 0, 1, 0, 1,]))
     # Test with taxicab metric.
-    y_pred = nearest_neighbor_predict(X, y, X_test, metric='taxicab')
+    y_pred = submission.nearest_neighbor_predict(X, y, X_test, metric='taxicab')
     assert np.all(y_pred == np.array([0, 0, 0, 0, 1, 0, 1,]))
