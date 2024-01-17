@@ -69,6 +69,7 @@ def selector(X):
     """
     pass # IMPLEMENT ME
 
+
 def covariance(X):
     """Compute sample covariance matrix of NxD feature matrix.
 
@@ -76,7 +77,7 @@ def covariance(X):
     Args:
         X: NxD numpy array, where N is number of samples and D the number of features.
     Returns:
-        C: DxD numpy array, where C_ij is cov(X[:,i], X[:,j]) = Sum((xi - xmean)(yi - ymean))/(N-1)
+        C: DxD numpy array, where C_ij is cov(X[:,i], X[:,j]) = Sum_k((Xki - Xi_mean)(Xkj - Xk_mean))/(N-1)
     Warning: 
         The sample covariance is an estimate of the true covariance of the random variables. 
         There are other ways to estimate the variance from a finite dataset; use this definition.
