@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Numpy test",
+      "setup": "sudo -H pip3 install numpy pytest",
+      "run": "pytest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
